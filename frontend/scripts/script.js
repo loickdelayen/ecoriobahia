@@ -1,41 +1,27 @@
-document.querySelector('.button').addEventListener('click', function () {
-    alert('Orçamento solicitado!');
+const form = document.querySelector('#contactForm');
+const button = document.querySelector('.button');
+
+button.addEventListener('click', () => {
+  const form = document.querySelector('#contactForm');
+  form.scrollIntoView({ behavior: 'smooth' });
 });
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const message = document.getElementById('message').value;
-    alert(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${message}`);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const dados = {
+    nome: document.querySelector('#nome').value,
+    email: document.querySelector('#email').value,
+    telefone: document.querySelector('#telefone').value,
+    mensagem: document.querySelector('#mensagem').value
+  };
+  fetch('/enviar-email', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(dados)
+  })
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));
 });
-
-function sendEmail(name, email, phone, message) {
-    const data = {
-        name: name,
-        email: email,
-        phone: phone,
-        message: message
-    };
-
-    fetch('http://localhost:3000/enviar-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.success) {
-            alert('Email enviado com sucesso!');
-        } else {
-            alert('Erro ao enviar o email. Tente novamente.');
-        }
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        alert('Erro ao enviar o email. Tente novamente.');
-    });
-}

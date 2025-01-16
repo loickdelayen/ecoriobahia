@@ -5,19 +5,23 @@ const path = require('path');
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '../frontend/index.html'));
-});
+    res.redirect('/telaprincipal');
+  });
 
 app.post('/enviar-email', (req, res) => {
-    const { name, email, phone, message } = req.body;
+    const { nome, email, telefone, mensagem } = req.body;
+    console.log(nome, email, telefone, mensagem);
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'loickdelayen@gmail.com', // Seu email
-            pass: 'JBchlulo12*' // Sua senha
+            user: 'testador192@gmail.com', // Seu email
+            pass: 'xbrwezragejouuws' // Sua senha
         }
     });
 
@@ -25,7 +29,7 @@ app.post('/enviar-email', (req, res) => {
         from: 'seu-email@gmail.com',
         to: 'info@conceitosolar.com.br', // Email de destino
         subject: 'Novo Contato do Formulário',
-        text: `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${message}`
+        text: `Nome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -34,7 +38,7 @@ app.post('/enviar-email', (req, res) => {
             res.json({ success: false });
         } else {
             console.log('Email enviado:', info.response);
-            res.json({ success: true });
+            res.send({ success: true, message: 'Email enviado com sucesso!' });
         }
     });
 });
