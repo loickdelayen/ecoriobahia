@@ -1,27 +1,23 @@
 @media (max-width: 768px) {
-    font-size: 80%;
-    
-    .container {
-      max-width: 100%;
-      max-height: 100vh;
-    }
-    
-    img {
-      max-width: 100%;
-      max-height: 100vh;
-    }
-
+    /* Ajusta o tamanho da fonte */
     .ecogranile {
-        font-size: 2em;
-      }
-      
-      .piso {
-        font-size: 1.5em;
-      }
-      
-      .transforme {
-        font-size: 1em;
-      }
+      font-size: 36px;
+    }
+    
+    .piso {
+      font-size: 60px;
+    }
+    
+    .transforme {
+      font-size: 18px;
+    }
+    
+    .container-form input[type="text"],
+    .container-form input[type="email"],
+    .container-form input[type="tel"],
+    .container-form textarea {
+      font-size: 16px;
+    }
   }
 
 body {
