@@ -1,10 +1,19 @@
 @media (max-width: 768px) {
-
-    /* Estilos para dispositivos móveis */
+    /* Ajusta o tamanho da fonte */
+    font-size: 16px;
+    
+    /* Ajusta a largura e altura dos elementos */
     .container {
-        width: 100%;
+      max-width: 100%;
+      max-height: 100vh;
     }
-}
+    
+    /* Ajusta a largura e altura das imagens */
+    img {
+      max-width: 100%;
+      max-height: 100vh;
+    }
+  }
 
 body {
     overflow-x: hidden;
