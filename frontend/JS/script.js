@@ -7,23 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
     form.scrollIntoView({ behavior: 'smooth' });
   });
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const dados = {
-      nome: document.querySelector('#nome').value,
-      email: document.querySelector('#email').value,
-      telefone: document.querySelector('#telefone').value,
-      mensagem: document.querySelector('#mensagem').value
-    };
-    fetch('/enviar-email', {
+// Enviar formulário de contato
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const telefone = document.getElementById('telefone').value;
+  const mensagem = document.getElementById('mensagem').value;
+
+  fetch('/enviar-email', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+          'Content-Type': 'application/json'
       },
-      body: JSON.stringify(dados)
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.error(err));
-  });
+      body: JSON.stringify({ nome, email, telefone, mensagem })
+  })
+  .then((response) => response.json())
+  .then((data) => {
+      if (data.success) {
+          alert(data.message);
+      } else {
+          alert(data.message);
+      }
+  })
+  .catch((error) => console.error('Erro ao enviar formulário:', error));
+});
 });

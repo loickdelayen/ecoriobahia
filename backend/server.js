@@ -38,7 +38,7 @@ app.post('/enviar-email', (req, res) => {
             res.json({ success: false });
         } else {
             console.log('Email enviado:', info.response);
-            res.send({ success: true, message: 'Email enviado com sucesso!' });
+            res.json({ success: true, message: 'Email enviado com sucesso!' });
         }
     });
 });
