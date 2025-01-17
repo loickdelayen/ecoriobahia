@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 
 app.get('/', (req, res) => {
     res.redirect('/telaprincipal');
-  });
+});
 
 app.post('/enviar-email', (req, res) => {
     const { nome, email, telefone, mensagem } = req.body;
