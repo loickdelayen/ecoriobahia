@@ -7,6 +7,18 @@
       max-width: 100%;
       max-height: 100vh;
     }
+
+    .piso {
+        width: 100%;
+    }
+
+    .transforme {
+        width: 100%;
+    }
+
+    .cores {
+        width: 100%;
+    }
     
     /* Ajusta a largura e altura das imagens */
     img {
