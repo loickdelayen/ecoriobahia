@@ -1,49 +1,30 @@
 @media (max-width: 768px) {
-    /* Ajusta o tamanho da fonte */
     font-size: 80%;
     
-    /* Ajusta a largura e altura dos elementos */
     .container {
       max-width: 100%;
       max-height: 100vh;
     }
     
-    /* Ajusta a largura e altura das imagens */
     img {
       max-width: 100%;
       max-height: 100vh;
     }
-    
-    /* Ajusta o tamanho da fonte para o título */
+
     .ecogranile {
-      font-size: 2em;
-    }
-    
-    /* Ajusta o tamanho da fonte para o texto */
-    .piso {
-      font-size: 1.5em;
-    }
-    
-    /* Ajusta o tamanho da fonte para o texto */
-    .transforme {
-      font-size: 1em;
-    }
-    
-    /* Ajusta o tamanho da fonte para o formulário */
-    .container-form {
-      font-size: 1em;
-    }
-    
-    /* Ajusta o tamanho da fonte para o formulário */
-    .container-form input[type="text"],
-    .container-form input[type="email"],
-    .container-form input[type="tel"],
-    .container-form textarea {
-      font-size: 1em;
-    }
+        font-size: 2em;
+      }
+      
+      .piso {
+        font-size: 1.5em;
+      }
+      
+      .transforme {
+        font-size: 1em;
+      }
   }
-  
-  body {
+
+body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -56,9 +37,9 @@
     justify-content: center;
     min-height: 100vh;
     position: relative;
-  }
-  
-  body::before {
+}
+
+body::before {
     content: "";
     position: absolute;
     top: 0;
@@ -71,44 +52,44 @@
     background-repeat: no-repeat;
     filter: brightness(0.2);
     z-index: -1;
-  }
-  
-  .container {
+}
+
+.container {
     text-align: center;
     margin-top: 120px;
-  }
-  
-  .ecogranile {
-    font-size: 2em;
-  }
-  
-  .piso {
+}
+
+.ecogranile {
+    font-size: 72px;
+}
+
+.piso {
     font-family: 'Cinzel', sans-serif;
     font-style: normal;
-    font-size: 1.5em;
+    font-size: 100px;
     font-weight: 900;
-  }
-  
-  .transforme {
-    font-size: 1em;
-  }
-  
-  h1,
-  h2 {
+}
+
+.transforme {
+    font-size: 24px;
+}
+
+h1,
+h2 {
     margin-bottom: 1rem;
-  }
-  
-  .logo {
+}
+
+.logo {
     display: inline-block;
     margin-bottom: 1rem;
-  }
-  
-  .logo img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .button {
+}
+
+.logo img {
+    width: 346.3333px;
+    height: 85.1639px;
+}
+
+.button {
     display: inline-block;
     padding: 1rem 2rem;
     background-color: #39CB14E6;
@@ -117,23 +98,23 @@
     border-radius: 100px;
     cursor: pointer;
     margin-top: 1rem;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     opacity: 0.8;
-  }
-  
-  .footer {
+}
+
+.footer {
     position: absolute;
     bottom: 10px;
     right: 10px;
-  }
-  
-  .footer img {
+}
+
+.footer img {
     width: 50px;
-  }
-  
-  .faixa-branca {
+}
+
+.faixa-branca {
     background-color: #ffffff;
     height: 120px;
     width: 100%;
@@ -142,9 +123,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .faixa-form {
+}
+
+.faixa-form {
     background-color: black;
     width: 100%;
     min-height: 100vh;
@@ -152,9 +133,9 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-  }
-  
-  .section-form {
+}
+
+.section-form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,51 +145,50 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 400px;
-  }
-  
-  .container-form {
+}
+
+.container-form {
     width: 100%;
     padding: 20px;
     background-color: #111;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-  }
-  
-  .container-form h1 {
+}
+
+.container-form h1 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .container-form form {
+}
+
+.container-form form {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-  }
-  
-  .container-form input[type="text"],
-  .container-form input[type="email"],
-  .container-form input[type="tel"],
-  .container-form textarea {
+}
+
+.container-form input[type="text"],
+.container-form input[type="email"],
+.container-form input[type="tel"],
+.container-form textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
     background-color: #222;
     color: #fff;
-    font-size: 1em; /* Ajuste para dispositivos móveis */
-  }
-  
-  .container-form input[type="text"]:focus,
-  .container-form input[type="email"]:focus,
-  .container-form input[type="tel"]:focus,
-  .container-form textarea:focus {
+}
+
+.container-form input[type="text"]:focus,
+.container-form input[type="email"]:focus,
+.container-form input[type="tel"]:focus,
+.container-form textarea:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-  }
-  
-  .container-form button {
+}
+
+.container-form button {
     background-color: #0f0;
     color: #fff;
     padding: 10px 20px;
@@ -216,13 +196,13 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .container-form button:hover {
+}
+
+.container-form button:hover {
     background-color: #0c0;
-  }
-  
-  .cores {
+}
+
+.cores {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -231,19 +211,19 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-  }
-  
-  .cor {
+}
+
+.cor {
     font-size: 50px;
     font-family: 'Cinzel', sans-serif;
     justify-content: center;
     display: flex;
-  }
-  
-  .descricao-cor {
+}
+
+.descricao-cor {
     font-size: 30px;
     font-family: 'Cinzel', sans-serif;
     justify-content: center;
     display: flex;
     margin-bottom: 20px;
-  }
+}
