@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#contactForm');
   const button = document.querySelector('.button');
+  const button1 = document.querySelector('.button1');
 
   button.addEventListener('click', () => {
+    const form = document.querySelector('#contactForm');
+    form.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  button1.addEventListener('click', () => {
     const form = document.querySelector('#contactForm');
     form.scrollIntoView({ behavior: 'smooth' });
   });

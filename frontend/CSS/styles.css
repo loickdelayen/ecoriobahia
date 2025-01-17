@@ -78,6 +78,21 @@ h2 {
     opacity: 0.8;
 }
 
+.button1 {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #39CB14E6;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.button1:hover {
+    opacity: 0.8;
+}
+
 .footer {
     position: absolute;
     bottom: 10px;
@@ -200,4 +215,37 @@ h2 {
     justify-content: center;
     display: flex;
     margin-bottom: 20px;
+}
+
+.ecogranile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.info-image img,
+.info-image-bottom img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.info-text h1 {
+    font-size: 28px;
+    font-family: 'Cinzel', sans-serif;
+    margin-bottom: 15px;
+}
+
+.info-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-width: 600px;
 }
