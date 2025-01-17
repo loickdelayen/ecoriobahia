@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+    /* Ajusta o tamanho da fonte */
+    .ecogranile {
+      font-size: 24px;
+    }
+    
+    .piso {
+      font-size: 36px;
+    }
+    
+    .transforme {
+      font-size: 14px;
+    }
+    
+    .container-form input[type="text"],
+    .container-form input[type="email"],
+    .container-form input[type="tel"],
+    .container-form textarea {
+      font-size: 12px;
+    }
+    
+    /* Ajusta a largura e altura dos elementos */
+    .container {
+      max-width: 100%;
+      max-height: 100vh;
+    }
+    
+    /* Ajusta a largura e altura das imagens */
+    img {
+      max-width: 100%;
+      max-height: 100vh;
+    }
+  }
